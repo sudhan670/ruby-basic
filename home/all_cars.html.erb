@@ -1,0 +1,18 @@
+<h2>All available cars (<%= @car_count %>)</h2>
+<table>
+	<tr>
+		<th> Company </th>
+		<th> Model </th>
+		<th> Color </th>
+		<th> Kms Run </th>
+	</tr>
+	<% @cars.each do |car| %>
+	<tr>
+		<th> <%= car.company %> </th>
+		<th> <%= car.model %> </th>
+		<th> <%= car.color %> </th>
+		<th> <%= car.kms_run %> </th>
+		<th> <%= link_to "Show more", car_path(id: car.id) %> </th>
+	</tr>
+	<% end %>
+</table>

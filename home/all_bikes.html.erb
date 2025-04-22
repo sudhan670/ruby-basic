@@ -1,0 +1,18 @@
+<h2>All available bikes (<%= @bike_count %>)</h2>
+<table>
+	<tr>
+		<th> Company </th>
+		<th> Model </th>
+		<th> Color </th>
+		<th> Kms Run </th>
+	</tr>
+	<% @bikes.each do |bike| %>
+	<tr>
+		<th> <%= bike.company %> </th>
+		<th> <%= bike.model %> </th>
+		<th> <%= bike.color %> </th>
+		<th> <%= bike.kms_run %> </th>
+		<th> <%= link_to "Show more", bike_path(id: bike.id) %> </th>
+	</tr>
+	<% end %>
+</table>
